@@ -79,6 +79,7 @@
     </None>
     <Content Include="HomePageWebForm.aspx" />
     <Content Include="RectanglePerimeterWebForm.aspx" />
+    <Content Include="TextpartWebForm.aspx" />
     <Content Include="TrianglePerimeterWebForm.aspx" />
     <Content Include="Web.config" />
     <None Include="Connected Services\BrailleServiceReference\PrinterWebService.wsdl" />
@@ -110,6 +111,13 @@
     </Compile>
     <Compile Include="RectanglePerimeterWebForm.aspx.designer.cs">
       <DependentUpon>RectanglePerimeterWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TextpartWebForm.aspx.cs">
+      <DependentUpon>TextpartWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TextpartWebForm.aspx.designer.cs">
+      <DependentUpon>TextpartWebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="TrianglePerimeterWebForm.aspx.cs">
       <DependentUpon>TrianglePerimeterWebForm.aspx</DependentUpon>

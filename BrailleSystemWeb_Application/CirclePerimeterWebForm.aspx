@@ -37,6 +37,9 @@
             height: 414px;
             width: 1323px;
         }
+        .auto-style12 {
+            background-color: #CC66FF;
+        }
     </style>
 </head>
 <body style="height: 511px; width: 1229px;">
@@ -85,7 +88,8 @@
                         <strong>
                         <asp:Button ID="Buttoncircle" runat="server" Text="calculate" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="354px" />
                         </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="brailleButton1" runat="server" CssClass="auto-style12" Height="47px" OnClick="Button1_Click" Text="convert to braille" Width="305px" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </td>
                 </tr>
             </table>

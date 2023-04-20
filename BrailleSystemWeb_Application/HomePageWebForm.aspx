@@ -16,11 +16,7 @@
         }
         .auto-style3 {
             background-color: #66FFCC;
-        }
-        .auto-style4 {
-            background-color: #00CCFF;
-        }
-        </style>
+        }   </style>
 </head>
 <body style="height: 621px; width: 1365px;">
     <form id="form1" runat="server">
@@ -44,14 +40,15 @@
         <br />
         <br />
         <br />
-        for the braille service you can enter the text character as you prefer<br />
         <br />
         <br />
+        in this braille service you can also enter the text part that you prefer to convert to the text to braille
         <br />
-        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style4" Height="105px" Width="526px"></asp:TextBox>
+        <br />
+        if you want click the following button!<br />
         <br />
         <br />
-        <asp:Button ID="homeButton2" runat="server" Height="53px" OnClick="Button1_Click" Text="Submit" Width="230px" />
+        <asp:Button ID="homeButton2" runat="server" Height="53px" OnClick="Button2_Click" Text="Submit" Width="230px" />
         <br />
         <br />
     </form>
