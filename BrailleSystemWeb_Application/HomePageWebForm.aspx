@@ -33,9 +33,9 @@
             &nbsp;</p>
         <asp:DropDownList ID="DropDownList1" runat="server" Height="99px" Width="520px" CssClass="auto-style3">
             <asp:ListItem Text="select shape"  Value="1"></asp:ListItem>
-            <asp:ListItem  Text="circlepage"  Value="2"></asp:ListItem>
-            <asp:ListItem Text="rectangle page"  Value="3"></asp:ListItem>
-             <asp:ListItem Text="triangle page "  Value="4"></asp:ListItem>
+            <asp:ListItem ID="Circle_1"     Text="circlepage"  Value="2"></asp:ListItem>
+            <asp:ListItem ID="Rectangle_2"  Text ="rectangle page"  Value="3"></asp:ListItem>
+             <asp:ListItem  ID="Triangle_3" Text="triangle page "  Value="4"></asp:ListItem>
         </asp:DropDownList>
         <br />
         <br />
