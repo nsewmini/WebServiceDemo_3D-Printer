@@ -2,34 +2,110 @@
 <wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
-      <s:element name="HelloWorld">
-        <s:complexType />
-      </s:element>
-      <s:element name="HelloWorldResponse">
+      <s:element name="CalculateCirclePerimeter">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="radius" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateCirclePerimeterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalculateCirclePerimeterResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateRectanglePerimeter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="length" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="width" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateRectanglePerimeterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalculateRectanglePerimeterResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateTrianglePerimeter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="side1" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="side2" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="side3" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateTrianglePerimeterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalculateTrianglePerimeterResult" type="s:double" />
           </s:sequence>
         </s:complexType>
       </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="HelloWorldSoapIn">
-    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  <wsdl:message name="CalculateCirclePerimeterSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateCirclePerimeter" />
   </wsdl:message>
-  <wsdl:message name="HelloWorldSoapOut">
-    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  <wsdl:message name="CalculateCirclePerimeterSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateCirclePerimeterResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculateRectanglePerimeterSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateRectanglePerimeter" />
+  </wsdl:message>
+  <wsdl:message name="CalculateRectanglePerimeterSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateRectanglePerimeterResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculateTrianglePerimeterSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateTrianglePerimeter" />
+  </wsdl:message>
+  <wsdl:message name="CalculateTrianglePerimeterSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateTrianglePerimeterResponse" />
   </wsdl:message>
   <wsdl:portType name="PrinterWebServiceSoap">
-    <wsdl:operation name="HelloWorld">
-      <wsdl:input message="tns:HelloWorldSoapIn" />
-      <wsdl:output message="tns:HelloWorldSoapOut" />
+    <wsdl:operation name="CalculateCirclePerimeter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this method calculate the perimeter of the circle</wsdl:documentation>
+      <wsdl:input message="tns:CalculateCirclePerimeterSoapIn" />
+      <wsdl:output message="tns:CalculateCirclePerimeterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateRectanglePerimeter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this method calculate the perimeter of the Rectangle</wsdl:documentation>
+      <wsdl:input message="tns:CalculateRectanglePerimeterSoapIn" />
+      <wsdl:output message="tns:CalculateRectanglePerimeterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateTrianglePerimeter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this method calculate the perimeter of the Triangle</wsdl:documentation>
+      <wsdl:input message="tns:CalculateTrianglePerimeterSoapIn" />
+      <wsdl:output message="tns:CalculateTrianglePerimeterSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="PrinterWebServiceSoap" type="tns:PrinterWebServiceSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="HelloWorld">
-      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+    <wsdl:operation name="CalculateCirclePerimeter">
+      <soap:operation soapAction="http://tempuri.org/CalculateCirclePerimeter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateRectanglePerimeter">
+      <soap:operation soapAction="http://tempuri.org/CalculateRectanglePerimeter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateTrianglePerimeter">
+      <soap:operation soapAction="http://tempuri.org/CalculateTrianglePerimeter" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -40,8 +116,26 @@
   </wsdl:binding>
   <wsdl:binding name="PrinterWebServiceSoap12" type="tns:PrinterWebServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="HelloWorld">
-      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+    <wsdl:operation name="CalculateCirclePerimeter">
+      <soap12:operation soapAction="http://tempuri.org/CalculateCirclePerimeter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateRectanglePerimeter">
+      <soap12:operation soapAction="http://tempuri.org/CalculateRectanglePerimeter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateTrianglePerimeter">
+      <soap12:operation soapAction="http://tempuri.org/CalculateTrianglePerimeter" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

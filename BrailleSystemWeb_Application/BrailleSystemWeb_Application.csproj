@@ -70,9 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CirclePerimeterWebForm.aspx" />
-    <Content Include="Connected Services\BrailleServiceReference\BrailleSystemWeb_Application.BrailleServiceReference.HelloWorldResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\BrailleServiceReference\PrinterWebService.disco" />
     <None Include="Connected Services\BrailleServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\BrailleServiceReference\configuration.svcinfo" />
@@ -80,6 +77,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="HomePageWebForm.aspx" />
+    <Content Include="RectanglePerimeterWebForm.aspx" />
+    <Content Include="TrianglePerimeterWebForm.aspx" />
     <Content Include="Web.config" />
     <None Include="Connected Services\BrailleServiceReference\PrinterWebService.wsdl" />
   </ItemGroup>
@@ -96,7 +96,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="HomePageWebForm.aspx.cs">
+      <DependentUpon>HomePageWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePageWebForm.aspx.designer.cs">
+      <DependentUpon>HomePageWebForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RectanglePerimeterWebForm.aspx.cs">
+      <DependentUpon>RectanglePerimeterWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RectanglePerimeterWebForm.aspx.designer.cs">
+      <DependentUpon>RectanglePerimeterWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrianglePerimeterWebForm.aspx.cs">
+      <DependentUpon>TrianglePerimeterWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrianglePerimeterWebForm.aspx.designer.cs">
+      <DependentUpon>TrianglePerimeterWebForm.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

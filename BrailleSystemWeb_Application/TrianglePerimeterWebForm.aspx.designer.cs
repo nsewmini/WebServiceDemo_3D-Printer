@@ -11,7 +11,7 @@ namespace BrailleSystemWeb_Application
 {
 
 
-    public partial class CirclePerimeterWebForm
+    public partial class TrianglePerimeterWebForm
     {
 
         /// <summary>
@@ -24,48 +24,48 @@ namespace BrailleSystemWeb_Application
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txtradius control.
+        /// txtside01 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtradius;
+        protected global::System.Web.UI.WebControls.TextBox txtside01;
 
         /// <summary>
-        /// txtcenterX control.
+        /// txtside02 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcenterX;
+        protected global::System.Web.UI.WebControls.TextBox txtside02;
 
         /// <summary>
-        /// txtcenterY control.
+        /// txtside03 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcenterY;
+        protected global::System.Web.UI.WebControls.TextBox txtside03;
 
         /// <summary>
-        /// lblresult control.
+        /// lblresult02 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblresult;
+        protected global::System.Web.UI.WebControls.Label lblresult02;
 
         /// <summary>
-        /// Buttoncircle control.
+        /// Buttontriangle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Buttoncircle;
+        protected global::System.Web.UI.WebControls.Button Buttontriangle;
     }
 }
