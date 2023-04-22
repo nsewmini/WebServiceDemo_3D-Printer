@@ -54,9 +54,34 @@
             background-color: #FF0066;
         }
         </style>
+     <script type="text/javascript">
+        function validateForm02() {
+            // Get the values of the form fields
+            var side01 = document.getElementById("txtside01").value;
+            var side02 = document.getElementById("txtside02").value;
+            var side03 = document.getElementById("txtside03").value;
+            // Check if the fields are empty or not numeric
+            if (isNaN(side01) || side01.trim() == "") {
+                alert("Please enter a valid value for side 01");
+                return false;
+            }
+
+            if (isNaN(side02) || side02.trim() == "") {
+                alert("Please enter a valid value for side 02");
+                return false;
+            }
+            if (isNaN(side03) || side03.trim() == "") {
+                alert("Please enter a valid value for side 03");
+                return false;
+            }
+            // If everything is valid, return true to submit the form
+            return true;
+        }
+     </script>
+
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" onsubmit = "return validateForm02();">
         <div class="auto-style16">
             <span class="auto-style17">triangle perimeter calculation</span><br class="auto-style17" />
         </div>

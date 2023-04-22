@@ -45,9 +45,30 @@
             background-color: #FF0066;
         }
     </style>
+     <script type="text/javascript">
+        function validateForm01() {
+            // Get the values of the form fields
+            var width = document.getElementById("txtwidth").value;
+            var length = document.getElementById("txtlength").value;
+          
+            // Check if the fields are empty or not numeric
+            if (isNaN(width) || width.trim() == "") {
+                alert("Please enter a valid width");
+                return false;
+            }
+
+            if (isNaN(length) || length.trim() == "") {
+                alert("Please enter a valid length");
+                return false;
+            }
+
+            // If everything is valid, return true to submit the form
+            return true;
+        }
+     </script>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" onsubmit = "return validateForm01();">
         <div class="auto-style14">
             <strong><span class="auto-style16">rectangle&nbsp; perimeter calculation</span></strong><br class="auto-style16" />
             <br />
