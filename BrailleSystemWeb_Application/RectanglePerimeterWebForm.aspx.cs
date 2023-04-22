@@ -20,5 +20,15 @@ namespace BrailleSystemWeb_Application
             double result = client01.CalculateRectanglePerimeter(Convert.ToInt32(txtwidth.Text), Convert.ToInt32(txtlength.Text));
             lblresult01.Text = result.ToString();
         }
+
+        protected void txtwidth_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,7 +27,7 @@
             for the braille service you can choose any shapes from dropdownlist as you prefer</p>
         <p>
             &nbsp;</p>
-        <asp:DropDownList ID="DropDownList1" runat="server" Height="99px" Width="520px" CssClass="auto-style3">
+        <asp:DropDownList ID="DropDownList1" runat="server" Height="99px" Width="520px" CssClass="auto-style3" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1">
             <asp:ListItem Text="select shape"  Value="1"></asp:ListItem>
             <asp:ListItem ID="Circle_1"     Text="circlepage"  Value="2"></asp:ListItem>
             <asp:ListItem ID="Rectangle_2"  Text ="rectangle page"  Value="3"></asp:ListItem>

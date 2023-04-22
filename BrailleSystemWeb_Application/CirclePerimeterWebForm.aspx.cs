@@ -16,9 +16,11 @@ namespace BrailleSystemWeb_Application
 
         protected void Buttoncircle_Click(object sender, EventArgs e)
         {
-            BrailleServiceReference.PrinterWebServiceSoapClient client=new BrailleServiceReference.PrinterWebServiceSoapClient ();
-            double Result = client.CalculateCirclePerimeter(Convert.ToInt32(txtradius.Text));
-            lblresult.Text=Result.ToString();   
+         
+
+            BrailleServiceReference.PrinterWebServiceSoapClient client = new BrailleServiceReference.PrinterWebServiceSoapClient();
+            double result = client.CalculateCirclePerimeter(Convert.ToInt32(txtradius.Text));
+            lblresult.Text = result.ToString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)

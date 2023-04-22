@@ -22,7 +22,9 @@ namespace WebServiceDemo_3D_Printer
         public double CalculateCirclePerimeter(double radius)
         {//here we get the assumption that  pi is a mathematical constant approximately equal to 3.14159
             //here center coordinates is not effect for the circle perimeter calculation
-            if (radius <= 0)
+            
+            
+            if ((radius <= 0))
             {
                 return -1;
             }

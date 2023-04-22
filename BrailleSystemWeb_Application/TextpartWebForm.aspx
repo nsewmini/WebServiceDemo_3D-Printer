@@ -31,7 +31,7 @@
         <p>
             &nbsp;</p>
         <p>
-            <asp:Button ID="TextpartButton2" runat="server" Height="62px" OnClick="Button2_Click" Text="convert to the braille" Width="316px" />
+            <asp:Button ID="TextpartbrailleButton2" runat="server" Height="62px" OnClick="Button2_Click" Text="convert to the braille" Width="316px" />
         </p>
         <p>
             &nbsp;</p>

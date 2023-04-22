@@ -44,12 +44,21 @@
             height: 52px;
             width: 1355px;
         }
-    </style>
+        .auto-style12 {
+            background-color: #CC66FF;
+        }
+        .auto-style16 {
+            text-align: center;
+        }
+        .auto-style17 {
+            background-color: #FF0066;
+        }
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            triangle perimeter calculation<br />
+        <div class="auto-style16">
+            <span class="auto-style17">triangle perimeter calculation</span><br class="auto-style17" />
         </div>
             <table style="font-family:Arial; " class="auto-style11">
                  <tr>
@@ -96,7 +105,8 @@
         <p>
             <strong>
                         <asp:Button ID="Buttontriangle" runat="server" Text="calculate" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="385px" />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="brailleButton3" runat="server" CssClass="auto-style12" Height="44px" OnClick="Button1_Click" Text="convert to braille" Width="305px" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </strong>
         </p>
     </form>

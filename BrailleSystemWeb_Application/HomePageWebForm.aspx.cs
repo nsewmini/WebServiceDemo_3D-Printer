@@ -54,6 +54,11 @@ namespace BrailleSystemWeb_Application
             Server.Transfer("TextpartWebForm.aspx");
 
         }
+
+        protected void DropDownList1_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

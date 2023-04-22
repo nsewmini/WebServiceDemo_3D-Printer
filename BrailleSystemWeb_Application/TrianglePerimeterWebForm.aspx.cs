@@ -20,5 +20,13 @@ namespace BrailleSystemWeb_Application
             double result = client02.CalculateTrianglePerimeter(Convert.ToInt32(txtside01.Text), Convert.ToInt32(txtside02.Text), Convert.ToInt32(txtside03.Text));
             lblresult02.Text = result.ToString();
         }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
     }
 }
