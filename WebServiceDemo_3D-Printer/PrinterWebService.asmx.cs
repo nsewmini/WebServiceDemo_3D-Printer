@@ -24,7 +24,7 @@ namespace WebServiceDemo_3D_Printer
             //here center coordinates is not effect for the circle perimeter calculation
             if (radius <= 0)
             {
-                throw new ArgumentException("Radius must be a positive number");
+                return -1;
             }
 
             double perimeter = 2 * Math.PI * radius;
@@ -36,7 +36,7 @@ namespace WebServiceDemo_3D_Printer
         {
             if (length <= 0 || width <= 0)
             {
-                throw new ArgumentException("Length and width must be positive numbers");
+                return -1;
             }
 
             double perimeter = 2 * (length + width);
@@ -48,7 +48,8 @@ namespace WebServiceDemo_3D_Printer
         {
             if ((side1 <= 0 || side2 <= 0 || side3 <= 0) || (!(side1 + side2 > side3 && side2 + side3 > side1 && side1 + side3 > side2)))
                 {
-                throw new ArgumentException("All sides must be positive numbers!");
+                return -1;
+
                
             }
 

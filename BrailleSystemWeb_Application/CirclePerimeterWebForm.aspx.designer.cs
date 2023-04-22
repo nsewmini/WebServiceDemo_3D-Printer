@@ -60,6 +60,15 @@ namespace BrailleSystemWeb_Application
         protected global::System.Web.UI.WebControls.Label lblresult;
 
         /// <summary>
+        /// lblCenter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCenter;
+
+        /// <summary>
         /// Buttoncircle control.
         /// </summary>
         /// <remarks>
