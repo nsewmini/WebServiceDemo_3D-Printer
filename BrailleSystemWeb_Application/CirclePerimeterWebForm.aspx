@@ -62,13 +62,37 @@
             background-color: #CC0066;
         }
     </style>
+     <script type="text/javascript">
+        function validateForm() {
+            // Get the values of the form fields
+            var radius = document.getElementById("txtradius").value;
+            var centerX = document.getElementById("txtcenterX").value;
+            var centerX = document.getElementById("txtcenterY").value;
+            // Check if the fields are empty or not numeric
+            if (isNaN(radius) || radius.trim() == "") {
+                alert("Please enter a valid radius");
+                return false;
+            }
 
+            if (isNaN(centerX) || centerX.trim() == "") {
+                alert("Please enter a valid center-X value");
+                return false;
+            }
+
+            if (isNaN(centerY) || centerY.trim() == "") {
+                alert("Please enter a valid center-Y value");
+                return false;
+            }
+            // If everything is valid, return true to submit the form
+            return true;
+        }
+     </script>
 </head>
 <body style="height: 460px; width: 1090px;">
 
     <p class="auto-style18">
         <span class="auto-style19">C</span><strong><span class="auto-style19">ircle perimeter calculation</span></strong></p>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" onsubmit = "return validateForm();">
         <div style="color: #000000; text-align: justify;" class="auto-style10">
             <table style="font-family:Arial; " class="auto-style11">
                  <tr>
