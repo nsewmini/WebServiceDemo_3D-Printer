@@ -32,6 +32,7 @@ namespace BrailleSystemWeb_Application
             lblbrailletriangle.Text = $"Braille dots: {result.Item2}";
 
 
+
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
