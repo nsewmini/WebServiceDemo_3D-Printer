@@ -20,9 +20,9 @@
             width: 1398px;
         }
         .auto-style9 {
-            color: #003300;
+            color: #FFFFFF;
             font-size: large;
-            background-color: #99FF99;
+            background-color: #000000;
             font-weight: bold;
             margin-left: 119px;
         }
@@ -36,22 +36,37 @@
         }
         .auto-style4 {
             width: 669px;
+            height: 71px;
         }
         .auto-style5 {
             text-align: left;
+            height: 71px;
         }
         .auto-style15 {
             height: 52px;
             width: 1355px;
         }
-        .auto-style12 {
-            background-color: #CC66FF;
-        }
         .auto-style16 {
             text-align: center;
         }
         .auto-style17 {
+            background-color: #00FF00;
+        }
+        .auto-style18 {
             background-color: #FF0066;
+            text-decoration: underline;
+            font-size: x-large;
+        }
+        .auto-style19 {
+            width: 669px;
+            height: 57px;
+        }
+        .auto-style20 {
+            text-align: left;
+            height: 57px;
+        }
+        .auto-style21 {
+            background-color: #CCFF99;
         }
         </style>
      <script type="text/javascript">
@@ -83,7 +98,7 @@
 <body>
     <form id="form1" runat="server" onsubmit = "return validateForm02();">
         <div class="auto-style16">
-            <span class="auto-style17">triangle perimeter calculation</span><br class="auto-style17" />
+            <span class="auto-style18"><strong><em><span class="auto-style17">triangle braille doys computation</span></em></strong></span><br class="auto-style17" />
         </div>
             <table style="font-family:Arial; " class="auto-style11">
                  <tr>
@@ -116,17 +131,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
             <table style="font-family:Arial; " class="auto-style15">
                 <tr>
-                     <td class="auto-style4">
+                     <td class="auto-style19">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caculate the perimeter</td>
-                     <td class="auto-style5">
-                         <asp:Label ID="lblperimetertriangle" runat="server" ></asp:Label>
+                     <td class="auto-style20">
+                         <asp:Label ID="lblperimetertriangle" runat="server" CssClass="auto-style21" ></asp:Label>
+                         <br />
                      </td>
                 </tr>
                  <tr>
                      <td class="auto-style4">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caculate braille dots count</td>
                      <td class="auto-style5">
-                         <asp:Label ID="lblbrailletriangle" runat="server" ></asp:Label>
+                         <asp:Label ID="lblbrailletriangle" runat="server" CssClass="auto-style21" ></asp:Label>
                      </td>
                 </tr>
             </table>
@@ -136,8 +152,8 @@
             &nbsp;</p>
         <p>
             <strong>
-                        <asp:Button ID="Buttontriangle" runat="server" Text="braille_option" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="385px" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="Buttontriangle" runat="server" Text="braille_option" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="563px" />
                         </strong>
         </p>
     </form>

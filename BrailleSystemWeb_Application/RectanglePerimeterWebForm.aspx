@@ -36,13 +36,20 @@
         .auto-style14 {
             text-align: center;
         }
-        .auto-style15 {
-            height: 36px;
-            width: 1398px;
-            background-color: #FF99FF;
-        }
         .auto-style16 {
             background-color: #FF0066;
+            color: #000000;
+            font-size: x-large;
+            text-decoration: underline;
+        }
+        .auto-style17 {
+            color: #000000;
+            font-size: x-large;
+            text-decoration: underline;
+            background-color: #00CC00;
+        }
+        .auto-style18 {
+            background-color: #00CC00;
         }
     </style>
      <script type="text/javascript">
@@ -70,8 +77,9 @@
 <body>
     <form id="form1" runat="server" onsubmit = "return validateForm01();">
         <div class="auto-style14">
-            <strong><span class="auto-style16">rectangle&nbsp; perimeter calculation</span></strong><br class="auto-style16" />
-            <br />
+            <strong><span class="auto-style16"><em><span class="auto-style18">rectangle&nbsp; barille dots computation</span></em></span></strong><em><br class="auto-style17" />
+            <br class="auto-style17" />
+            </em>
         </div>
             <table style="font-family:Arial; " class="auto-style11">
                  <tr>
