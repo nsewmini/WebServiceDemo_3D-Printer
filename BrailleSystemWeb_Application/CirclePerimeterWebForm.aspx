@@ -95,6 +95,9 @@
             text-align: center;
             width: 1253px;
         }
+        .auto-style30 {
+            background-color: #CCFF99;
+        }
     </style>
      <script type="text/javascript">
         function validateForm() {
@@ -164,7 +167,7 @@
                      <td class="auto-style24">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Caculate the perimeter</td>
                      <td class="auto-style23">
-                         <asp:Label ID="lblperimeter" runat="server" ></asp:Label>
+                         <asp:Label ID="lblperimeter" runat="server" CssClass="auto-style30" ></asp:Label>
                      </td>
                 </tr>
                  <tr>
@@ -172,7 +175,7 @@
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Caculate the braille dots count</td>
                      <td class="auto-style5">
-                         <asp:Label ID="lblbrailledots" runat="server" ></asp:Label>
+                         <asp:Label ID="lblbrailledots" runat="server" CssClass="auto-style30" ></asp:Label>
                      </td>
                 </tr>
                 <tr>
@@ -180,7 +183,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Center
   </td>
   <td class="auto-style21">
-    <asp:Label ID="lblCenter" runat="server" CssClass="auto-style13" Height="29px" Width="224px"></asp:Label>
+    <asp:Label ID="lblCenter" runat="server" CssClass="auto-style13" Height="29px" Width="279px"></asp:Label>
       <strong><br />
         [</strong><span class="auto-style28">Due to the 3D printer we get the centerpoints(x,y) for to know the what is the position]</span></td>
 </tr>
