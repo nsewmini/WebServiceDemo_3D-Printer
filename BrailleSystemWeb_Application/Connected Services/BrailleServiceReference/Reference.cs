@@ -83,11 +83,12 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateCirclePerimeterAndBrailleDots", ReplyAction="*")]
         System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CalculateCirclePerimeterAndBrailleDotsResponse> CalculateCirclePerimeterAndBrailleDotsAsync(BrailleSystemWeb_Application.BrailleServiceReference.CalculateCirclePerimeterAndBrailleDotsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateRectanglePerimeter", ReplyAction="*")]
-        double CalculateRectanglePerimeter(double length, double width);
+        // CODEGEN: Generating message contract since element name CalculateRectanglePerimeterAndBrailleDotsResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateRectanglePerimeterAndBrailleDots", ReplyAction="*")]
+        BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsResponse CalculateRectanglePerimeterAndBrailleDots(BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateRectanglePerimeter", ReplyAction="*")]
-        System.Threading.Tasks.Task<double> CalculateRectanglePerimeterAsync(double length, double width);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateRectanglePerimeterAndBrailleDots", ReplyAction="*")]
+        System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsResponse> CalculateRectanglePerimeterAndBrailleDotsAsync(BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateTrianglePerimeter", ReplyAction="*")]
         double CalculateTrianglePerimeter(double side1, double side2, double side3);
@@ -164,6 +165,78 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CalculateRectanglePerimeterAndBrailleDotsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CalculateRectanglePerimeterAndBrailleDots", Namespace="http://tempuri.org/", Order=0)]
+        public BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequestBody Body;
+        
+        public CalculateRectanglePerimeterAndBrailleDotsRequest() {
+        }
+        
+        public CalculateRectanglePerimeterAndBrailleDotsRequest(BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CalculateRectanglePerimeterAndBrailleDotsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public double length;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public double width;
+        
+        public CalculateRectanglePerimeterAndBrailleDotsRequestBody() {
+        }
+        
+        public CalculateRectanglePerimeterAndBrailleDotsRequestBody(double length, double width) {
+            this.length = length;
+            this.width = width;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CalculateRectanglePerimeterAndBrailleDotsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CalculateRectanglePerimeterAndBrailleDotsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsResponseBody Body;
+        
+        public CalculateRectanglePerimeterAndBrailleDotsResponse() {
+        }
+        
+        public CalculateRectanglePerimeterAndBrailleDotsResponse(BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CalculateRectanglePerimeterAndBrailleDotsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public BrailleSystemWeb_Application.BrailleServiceReference.ValueTupleOfDoubleInt32 CalculateRectanglePerimeterAndBrailleDotsResult;
+        
+        public CalculateRectanglePerimeterAndBrailleDotsResponseBody() {
+        }
+        
+        public CalculateRectanglePerimeterAndBrailleDotsResponseBody(BrailleSystemWeb_Application.BrailleServiceReference.ValueTupleOfDoubleInt32 CalculateRectanglePerimeterAndBrailleDotsResult) {
+            this.CalculateRectanglePerimeterAndBrailleDotsResult = CalculateRectanglePerimeterAndBrailleDotsResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PrinterWebServiceSoapChannel : BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -216,12 +289,31 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
             return ((BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap)(this)).CalculateCirclePerimeterAndBrailleDotsAsync(inValue);
         }
         
-        public double CalculateRectanglePerimeter(double length, double width) {
-            return base.Channel.CalculateRectanglePerimeter(length, width);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsResponse BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap.CalculateRectanglePerimeterAndBrailleDots(BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequest request) {
+            return base.Channel.CalculateRectanglePerimeterAndBrailleDots(request);
         }
         
-        public System.Threading.Tasks.Task<double> CalculateRectanglePerimeterAsync(double length, double width) {
-            return base.Channel.CalculateRectanglePerimeterAsync(length, width);
+        public BrailleSystemWeb_Application.BrailleServiceReference.ValueTupleOfDoubleInt32 CalculateRectanglePerimeterAndBrailleDots(double length, double width) {
+            BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequest inValue = new BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequest();
+            inValue.Body = new BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequestBody();
+            inValue.Body.length = length;
+            inValue.Body.width = width;
+            BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsResponse retVal = ((BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap)(this)).CalculateRectanglePerimeterAndBrailleDots(inValue);
+            return retVal.Body.CalculateRectanglePerimeterAndBrailleDotsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsResponse> BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap.CalculateRectanglePerimeterAndBrailleDotsAsync(BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequest request) {
+            return base.Channel.CalculateRectanglePerimeterAndBrailleDotsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsResponse> CalculateRectanglePerimeterAndBrailleDotsAsync(double length, double width) {
+            BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequest inValue = new BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequest();
+            inValue.Body = new BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequestBody();
+            inValue.Body.length = length;
+            inValue.Body.width = width;
+            return ((BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap)(this)).CalculateRectanglePerimeterAndBrailleDotsAsync(inValue);
         }
         
         public double CalculateTrianglePerimeter(double side1, double side2, double side3) {

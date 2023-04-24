@@ -42,54 +42,48 @@ namespace WebServiceDemo_3D_Printer
             return (perimeter, brailleDots);
         }
 
-
-
-
-
-
-
         /*public double CalculateCirclePerimeter(double radius)
-          {//here we get the assumption that  pi is a mathematical constant approximately equal to 3.14159
-           //here center coordinates is not effect for the circle perimeter calculation
+                 {//here we get the assumption that  pi is a mathematical constant approximately equal to 3.14159
+                  //here center coordinates is not effect for the circle perimeter calculation
 
 
-              if ((radius <= 0))
-              {
-                  return -1;
-              }
+                     if ((radius <= 0))
+                     {
+                         return -1;
+                     }
 
-              double perimeter = 2 * Math.PI * radius;
-              return perimeter;
-          }
+                     double perimeter = 2 * Math.PI * radius;
+                     return perimeter;
+                 }
 
 
-          //lets do the computation for circle shape
-          //Divide the circumference by the distance between the dots in Braille.
-          //. The standard distance between dots is 2.5 mm
-          //so we get the  2.5 mm
-          //divide by the dot pitch:
-          // Convert the perimeter to Braille dots
-          [WebMethod(Description = "This method calculates the number of Braille dots needed to represent a circle")]
-          public int CalculateBrailleDots(double radius)
-          {
-              double dotPitch = 2.5; // in millimeters
+                 //lets do the computation for circle shape
+                 //Divide the circumference by the distance between the dots in Braille.
+                 //. The standard distance between dots is 2.5 mm
+                 //so we get the  2.5 mm
+                 //divide by the dot pitch:
+                 // Convert the perimeter to Braille dots
+                 [WebMethod(Description = "This method calculates the number of Braille dots needed to represent a circle")]
+                 public int CalculateBrailleDots(double radius)
+                 {
+                     double dotPitch = 2.5; // in millimeters
 
-              // Check for invalid radius
-              if (radius <= 0)
-              {
-                  return -1;
-              }
+                     // Check for invalid radius
+                     if (radius <= 0)
+                     {
+                         return -1;
+                     }
 
-              // Calculate perimeter
-              double perimeter = 2 * Math.PI * radius;
+                     // Calculate perimeter
+                     double perimeter = 2 * Math.PI * radius;
 
-              // Calculate Braille dots
-              int brailleDots = (int)Math.Round(perimeter / dotPitch);
+                     // Calculate Braille dots
+                     int brailleDots = (int)Math.Round(perimeter / dotPitch);
 
-              return brailleDots;
-          }
-        
-  */
+                     return brailleDots;
+                 }
+
+         */
 
         /// <summary>
         /// ///
@@ -98,7 +92,27 @@ namespace WebServiceDemo_3D_Printer
         /// <param name="width"></param>
         /// <returns></returns>
 
+        [WebMethod(Description = "This method calculates the number of Braille dots and perimeter of a rectangle")]
+        public (double perimeter, int brailleDots) CalculateRectanglePerimeterAndBrailleDots(double length, double width)
+        {
+            double dotPitch = 2.5; // in millimeters
 
+            // Check for invalid length or width
+            if (length <= 0 || width <= 0)
+            {
+                return (-1, -1);
+            }
+
+            // Calculate perimeter
+            double perimeter = 2 * (length + width);
+
+            // Calculate Braille dots
+            int brailleDots = (int)Math.Round(perimeter / dotPitch);
+
+            return (perimeter, brailleDots);
+        }
+
+        /*
         [WebMethod(Description = "this method calculate the perimeter of the Rectangle")]
         public double CalculateRectanglePerimeter(double length, double width)
         {
@@ -110,7 +124,17 @@ namespace WebServiceDemo_3D_Printer
             double perimeter = 2 * (length + width);
             return perimeter;
         }
+        */
 
+
+
+
+
+
+
+
+
+        /*
         [WebMethod(Description = "this method calculate the perimeter of the Triangle")]
         public double CalculateTrianglePerimeter(double side1, double side2, double side3)
         {
@@ -125,7 +149,7 @@ namespace WebServiceDemo_3D_Printer
             double perimeter = side1 + side2 + side3;
             return perimeter;
         }
-
+        */
 
     }
 }
