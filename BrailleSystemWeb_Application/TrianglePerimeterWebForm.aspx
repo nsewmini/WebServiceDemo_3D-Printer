@@ -68,6 +68,10 @@
         .auto-style21 {
             background-color: #CCFF99;
         }
+        .auto-style22 {
+            width: 233px;
+            height: 76px;
+        }
         </style>
      <script type="text/javascript">
         function validateForm02() {
@@ -98,7 +102,7 @@
 <body>
     <form id="form1" runat="server" onsubmit = "return validateForm02();">
         <div class="auto-style16">
-            <span class="auto-style18"><strong><em><span class="auto-style17">triangle braille doys computation</span></em></strong></span><br class="auto-style17" />
+            <span class="auto-style18"><strong><em><span class="auto-style17">triangle braille dots computation</span></em></strong></span><br class="auto-style17" />
         </div>
             <table style="font-family:Arial; " class="auto-style11">
                  <tr>
@@ -151,11 +155,12 @@
         <p>
             &nbsp;</p>
         <p>
-            <strong>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="Buttontriangle" runat="server" Text="braille_option" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="563px" />
                         </strong>
         </p>
     </form>
+    <p>
+        &nbsp;</p>
 </body>
 </html>

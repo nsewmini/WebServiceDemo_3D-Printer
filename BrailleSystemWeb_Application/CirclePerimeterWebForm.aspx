@@ -6,16 +6,8 @@
 <head runat="server">
     <title>circle perimeter calculation</title>
     <style type="text/css">
-        .auto-style2 {
-            height: 53px;
-            width: 574px;
-        }
-        .auto-style3 {
-            height: 47px;
-            width: 574px;
-        }
         .auto-style5 {
-            height: 47px;
+            height: 59px;
             text-align: left;
             width: 574px;
         }
@@ -27,11 +19,11 @@
             font-size: large;
             background-color: #000000;
             font-weight: bold;
-            margin-left: 119px;
+            margin-left: 214px;
         }
         .auto-style10 {
             height: 360px;
-            width: 1348px;
+            width: 1254px;
         }
         .auto-style11 {
             height: 498px;
@@ -42,7 +34,7 @@
             margin-right: 0px;
         }
         .auto-style14 {
-            height: 53px;
+            height: 66px;
             width: 347px;
         }
         .auto-style17 {
@@ -57,34 +49,29 @@
             text-decoration: underline;
         }
         .auto-style20 {
-            height: 81px;
+            height: 94px;
             color: #009933;
         }
         .auto-style21 {
-            height: 81px;
+            height: 94px;
             text-align: left;
             width: 574px;
         }
         .auto-style23 {
-            height: 54px;
+            height: 64px;
             text-align: left;
             width: 574px;
         }
         .auto-style24 {
-            height: 54px;
+            height: 64px;
             width: 347px;
             color: #0033CC;
         }
         .auto-style25 {
             color: #0000FF;
         }
-        .auto-style26 {
-            height: 53px;
-            width: 347px;
-            color: #0033CC;
-        }
         .auto-style27 {
-            height: 47px;
+            height: 59px;
             width: 347px;
             color: #0033CC;
         }
@@ -93,10 +80,44 @@
         }
         .auto-style29 {
             text-align: center;
-            width: 1253px;
+            width: 1201px;
         }
         .auto-style30 {
             background-color: #CCFF99;
+        }
+        .auto-style31 {
+            height: 333px;
+            width: 493px;
+            margin-top: 31px;
+            float: left;
+        }
+        .auto-style32 {
+            height: 66px;
+            width: 574px;
+        }
+        .auto-style33 {
+            height: 75px;
+            width: 347px;
+            color: #0033CC;
+        }
+        .auto-style34 {
+            height: 75px;
+            width: 574px;
+        }
+        .auto-style35 {
+            height: 73px;
+            width: 347px;
+            color: #0033CC;
+        }
+        .auto-style36 {
+            height: 73px;
+            width: 574px;
+        }
+        .auto-style37 {
+            width: 412px;
+            float: right;
+            height: 324px;
+            margin-top: 34px;
         }
     </style>
      <script type="text/javascript">
@@ -125,10 +146,13 @@
         }
      </script>
 </head>
-<body style="height: 460px; width: 1090px;">
+<body style="height: 554px; width: 1090px;">
 
     <p class="auto-style29">
-        <span class="auto-style19"><em>C</em></span><strong><span class="auto-style19"><em>ircle braille dot computation</em></span></strong></p>
+        <span class="auto-style19"><em>C</em></span><strong><span class="auto-style19"><em>ircle braille dots computation</em></span></strong></p>
+    <p class="auto-style18">
+                        <img alt="" class="auto-style31" src="images/Annotation 2023-04-24 234126.png" />
+        <img alt="" class="auto-style37" src="images/Annotation 2023-04-24 235015.png" /></p>
     <p class="auto-style18">
         &nbsp;</p>
     <form id="form1" runat="server" onsubmit = "return validateForm();">
@@ -139,27 +163,27 @@
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style25">Radius</span>
 
                      </td>
-                     <td class="auto-style2">
+                     <td class="auto-style32">
                          <asp:TextBox ID="txtradius" runat="server" CssClass="auto-style8" Height="30px" Width="276px"></asp:TextBox>
                      </td>
                 </tr>
 
                 <tr>
-                     <td class="auto-style26">
+                     <td class="auto-style33">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Center-X
 
                      </td>
-                     <td class="auto-style2">
+                     <td class="auto-style34">
                          <asp:TextBox ID="txtcenterX" runat="server" CssClass="auto-style8" Height="25px" Width="273px" OnTextChanged="txtcenterX_TextChanged"></asp:TextBox>
                      </td>
                 </tr>
 
                 <tr>
-                     <td class="auto-style27">
+                     <td class="auto-style35">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Center-Y
 
                      </td>
-                     <td class="auto-style3">
+                     <td class="auto-style36">
                          <asp:TextBox ID="txtcenterY" runat="server" CssClass="auto-style13" Height="26px" Width="271px"></asp:TextBox>
                      </td>
                 </tr>
@@ -192,13 +216,15 @@
                     <td colspan="2" class="auto-style17">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <strong>
-                        <asp:Button ID="Buttoncircle" runat="server" Text="braille_option" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="496px" />
+                        <br />
+                        <br />
+                        <asp:Button ID="Buttoncircle" runat="server" Text="braille_option" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="685px" />
                         </strong>
                         <br />
                         <br />
                         <br />
                         <br />
-                    </td>
+                        </td>
                 </tr>
             </table>
 
