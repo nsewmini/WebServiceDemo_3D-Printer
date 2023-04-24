@@ -48,6 +48,8 @@
         }
         .auto-style16 {
             text-align: center;
+            width: 1335px;
+            height: 341px;
         }
         .auto-style17 {
             background-color: #00FF00;
@@ -69,8 +71,8 @@
             background-color: #CCFF99;
         }
         .auto-style22 {
-            width: 233px;
-            height: 76px;
+            width: 463px;
+            height: 255px;
         }
         </style>
      <script type="text/javascript">
@@ -102,7 +104,16 @@
 <body>
     <form id="form1" runat="server" onsubmit = "return validateForm02();">
         <div class="auto-style16">
-            <span class="auto-style18"><strong><em><span class="auto-style17">triangle braille dots computation</span></em></strong></span><br class="auto-style17" />
+            <br />
+            <span class="auto-style18"><strong><em><span class="auto-style17">&nbsp;Triangle braille dots computation</span></em></strong></span><br class="auto-style17" />
+            <br />
+            <img alt="" class="auto-style22" src="images/Annotation 2023-04-25 000759.png" /><br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         </div>
             <table style="font-family:Arial; " class="auto-style11">
                  <tr>

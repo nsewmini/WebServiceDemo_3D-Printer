@@ -54,6 +54,14 @@
         .auto-style19 {
             background-color: #CCFF99;
         }
+        .auto-style20 {
+            width: 473px;
+            height: 313px;
+            float: left;
+        }
+        .auto-style21 {
+            width: 304px;
+        }
     </style>
      <script type="text/javascript">
         function validateForm01() {
@@ -80,8 +88,13 @@
 <body>
     <form id="form1" runat="server" onsubmit = "return validateForm01();">
         <div class="auto-style14">
-            <strong><span class="auto-style16"><em><span class="auto-style18">rectangle&nbsp; barille dots computation</span></em></span></strong><em><br class="auto-style17" />
+            <strong><span class="auto-style16"><em><span class="auto-style18">&nbsp;Rectangle&nbsp; braille dots computation</span></em></span></strong><em><br class="auto-style17" />
             <br class="auto-style17" />
+            <br />
+            <br />
+            <img alt="" class="auto-style20" src="images/Annotation 2023-04-24 235637.png" /><img alt="" class="auto-style21" src="images/Annotation 2023-04-24 235659.png" /><br />
+            <br />
+            <br />
             </em>
         </div>
             <table style="font-family:Arial; " class="auto-style11">

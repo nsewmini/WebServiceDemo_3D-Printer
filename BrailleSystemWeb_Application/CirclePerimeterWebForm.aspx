@@ -149,7 +149,7 @@
 <body style="height: 554px; width: 1090px;">
 
     <p class="auto-style29">
-        <span class="auto-style19"><em>C</em></span><strong><span class="auto-style19"><em>ircle braille dots computation</em></span></strong></p>
+        &nbsp;&nbsp;&nbsp;&nbsp; <strong><span class="auto-style19"><em>&nbsp;Circle braille dots computation</em></span></strong></p>
     <p class="auto-style18">
                         <img alt="" class="auto-style31" src="images/Annotation 2023-04-24 234126.png" />
         <img alt="" class="auto-style37" src="images/Annotation 2023-04-24 235015.png" /></p>

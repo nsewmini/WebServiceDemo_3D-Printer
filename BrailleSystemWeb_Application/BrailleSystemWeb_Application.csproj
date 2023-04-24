@@ -83,6 +83,9 @@
     <Content Include="HomePageWebForm.aspx" />
     <Content Include="images\Annotation 2023-04-24 234126.png" />
     <Content Include="images\Annotation 2023-04-24 235015.png" />
+    <Content Include="images\Annotation 2023-04-24 235637.png" />
+    <Content Include="images\Annotation 2023-04-24 235659.png" />
+    <Content Include="images\Annotation 2023-04-25 000759.png" />
     <Content Include="RectanglePerimeterWebForm.aspx" />
     <Content Include="TextpartWebForm.aspx" />
     <Content Include="TrianglePerimeterWebForm.aspx" />
