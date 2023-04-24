@@ -2,20 +2,26 @@
 <wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
-      <s:element name="CalculateCirclePerimeter">
+      <s:element name="CalculateCirclePerimeterAndBrailleDots">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="radius" type="s:double" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="CalculateCirclePerimeterResponse">
+      <s:element name="CalculateCirclePerimeterAndBrailleDotsResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="CalculateCirclePerimeterResult" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="CalculateCirclePerimeterAndBrailleDotsResult" type="tns:ValueTupleOfDoubleInt32" />
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:complexType name="ValueTupleOfDoubleInt32">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Item1" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Item2" type="s:int" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="CalculateRectanglePerimeter">
         <s:complexType>
           <s:sequence>
@@ -49,11 +55,11 @@
       </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="CalculateCirclePerimeterSoapIn">
-    <wsdl:part name="parameters" element="tns:CalculateCirclePerimeter" />
+  <wsdl:message name="CalculateCirclePerimeterAndBrailleDotsSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateCirclePerimeterAndBrailleDots" />
   </wsdl:message>
-  <wsdl:message name="CalculateCirclePerimeterSoapOut">
-    <wsdl:part name="parameters" element="tns:CalculateCirclePerimeterResponse" />
+  <wsdl:message name="CalculateCirclePerimeterAndBrailleDotsSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateCirclePerimeterAndBrailleDotsResponse" />
   </wsdl:message>
   <wsdl:message name="CalculateRectanglePerimeterSoapIn">
     <wsdl:part name="parameters" element="tns:CalculateRectanglePerimeter" />
@@ -68,10 +74,10 @@
     <wsdl:part name="parameters" element="tns:CalculateTrianglePerimeterResponse" />
   </wsdl:message>
   <wsdl:portType name="PrinterWebServiceSoap">
-    <wsdl:operation name="CalculateCirclePerimeter">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this method calculate the perimeter of the circle</wsdl:documentation>
-      <wsdl:input message="tns:CalculateCirclePerimeterSoapIn" />
-      <wsdl:output message="tns:CalculateCirclePerimeterSoapOut" />
+    <wsdl:operation name="CalculateCirclePerimeterAndBrailleDots">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method calculates the number of Braille dots and perimeter of a circle</wsdl:documentation>
+      <wsdl:input message="tns:CalculateCirclePerimeterAndBrailleDotsSoapIn" />
+      <wsdl:output message="tns:CalculateCirclePerimeterAndBrailleDotsSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="CalculateRectanglePerimeter">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this method calculate the perimeter of the Rectangle</wsdl:documentation>
@@ -86,8 +92,8 @@
   </wsdl:portType>
   <wsdl:binding name="PrinterWebServiceSoap" type="tns:PrinterWebServiceSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="CalculateCirclePerimeter">
-      <soap:operation soapAction="http://tempuri.org/CalculateCirclePerimeter" style="document" />
+    <wsdl:operation name="CalculateCirclePerimeterAndBrailleDots">
+      <soap:operation soapAction="http://tempuri.org/CalculateCirclePerimeterAndBrailleDots" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -116,8 +122,8 @@
   </wsdl:binding>
   <wsdl:binding name="PrinterWebServiceSoap12" type="tns:PrinterWebServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="CalculateCirclePerimeter">
-      <soap12:operation soapAction="http://tempuri.org/CalculateCirclePerimeter" style="document" />
+    <wsdl:operation name="CalculateCirclePerimeterAndBrailleDots">
+      <soap12:operation soapAction="http://tempuri.org/CalculateCirclePerimeterAndBrailleDots" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -37,9 +37,6 @@
             height: 498px;
             width: 1200px;
         }
-        .auto-style12 {
-            background-color: #CC66FF;
-        }
         .auto-style13 {
             background-color: #FFFF99;
             margin-right: 0px;
@@ -60,6 +57,14 @@
         }
         .auto-style19 {
             background-color: #CC0066;
+        }
+        .auto-style20 {
+            height: 81px;
+        }
+        .auto-style21 {
+            height: 81px;
+            text-align: left;
+            width: 574px;
         }
     </style>
      <script type="text/javascript">
@@ -128,14 +133,21 @@
                      <td class="auto-style15">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Caculate the perimeter</td>
                      <td class="auto-style5">
-                         <asp:Label ID="lblresult" runat="server" ></asp:Label>
+                         <asp:Label ID="lblperimeter" runat="server" ></asp:Label>
+                     </td>
+                </tr>
+                 <tr>
+                     <td class="auto-style15">
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Caculate the perimeter</td>
+                     <td class="auto-style5">
+                         <asp:Label ID="lblbrailledots" runat="server" ></asp:Label>
                      </td>
                 </tr>
                 <tr>
-  <td class="auto-style4">
+  <td class="auto-style20">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Center
   </td>
-  <td class="auto-style5">
+  <td class="auto-style21">
     <asp:Label ID="lblCenter" runat="server" CssClass="auto-style13" Height="29px" Width="224px"></asp:Label>
       <strong><br />
         [</strong>Due to the 3D printer we get the centerpoints(x,y) for to know the what is the position]</td>
@@ -143,10 +155,10 @@
 
                 <tr>
                     <td colspan="2" class="auto-style17">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <strong>
                         <asp:Button ID="Buttoncircle" runat="server" Text="calculate the perimeter" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="306px" />
-                        </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="brailleButton1" runat="server" CssClass="auto-style12" Height="44px" OnClick="Button1_Click" Text="convert to braille" Width="305px" />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </strong>
                         <br />
                         <br />
                         <br />

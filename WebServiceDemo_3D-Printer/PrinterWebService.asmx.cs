@@ -15,23 +15,89 @@ namespace WebServiceDemo_3D_Printer
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
+
     public class PrinterWebService : System.Web.Services.WebService
     {
+     
 
-        [WebMethod(Description ="this method calculate the perimeter of the circle")]
-        public double CalculateCirclePerimeter(double radius)
-        {//here we get the assumption that  pi is a mathematical constant approximately equal to 3.14159
-            //here center coordinates is not effect for the circle perimeter calculation
+        [WebMethod(Description = "This method calculates the number of Braille dots and perimeter of a circle")]
+        public (double perimeter, int brailleDots) CalculateCirclePerimeterAndBrailleDots(double radius)
+        {
             
-            
-            if ((radius <= 0))
+
+        double dotPitch = 2.5; // in millimeters
+
+            // Check for invalid radius
+            if (radius <= 0)
             {
-                return -1;
+                return (-1, -1);
             }
 
+            // Calculate perimeter
             double perimeter = 2 * Math.PI * radius;
-            return perimeter;
+
+            // Calculate Braille dots
+            int brailleDots = (int)Math.Round(perimeter / dotPitch);
+
+            return (perimeter, brailleDots);
         }
+
+
+
+
+
+
+
+        /*public double CalculateCirclePerimeter(double radius)
+          {//here we get the assumption that  pi is a mathematical constant approximately equal to 3.14159
+           //here center coordinates is not effect for the circle perimeter calculation
+
+
+              if ((radius <= 0))
+              {
+                  return -1;
+              }
+
+              double perimeter = 2 * Math.PI * radius;
+              return perimeter;
+          }
+
+
+          //lets do the computation for circle shape
+          //Divide the circumference by the distance between the dots in Braille.
+          //. The standard distance between dots is 2.5 mm
+          //so we get the  2.5 mm
+          //divide by the dot pitch:
+          // Convert the perimeter to Braille dots
+          [WebMethod(Description = "This method calculates the number of Braille dots needed to represent a circle")]
+          public int CalculateBrailleDots(double radius)
+          {
+              double dotPitch = 2.5; // in millimeters
+
+              // Check for invalid radius
+              if (radius <= 0)
+              {
+                  return -1;
+              }
+
+              // Calculate perimeter
+              double perimeter = 2 * Math.PI * radius;
+
+              // Calculate Braille dots
+              int brailleDots = (int)Math.Round(perimeter / dotPitch);
+
+              return brailleDots;
+          }
+        
+  */
+
+        /// <summary>
+        /// ///
+        /// </summary>
+        /// <param name="length"></param>
+        /// <param name="width"></param>
+        /// <returns></returns>
+
 
         [WebMethod(Description = "this method calculate the perimeter of the Rectangle")]
         public double CalculateRectanglePerimeter(double length, double width)

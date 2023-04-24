@@ -18,28 +18,27 @@ namespace BrailleSystemWeb_Application
 
         protected void Buttoncircle_Click(object sender, EventArgs e)
         {
-          
+
 
             BrailleServiceReference.PrinterWebServiceSoapClient client = new BrailleServiceReference.PrinterWebServiceSoapClient();
-            double radius;
+            double radius = double.Parse(txtradius.Text);
 
-            if (Double.TryParse(txtradius.Text, out radius))
-            {
-                double result = client.CalculateCirclePerimeter(radius);
-                lblresult.Text = result.ToString();
-            }
-            else
-            {
-                string errorMessage = "Invalid input. Please enter a valid number for the radius.";
-                lblresult.Text = errorMessage;
-            }
+
+            var result = client.CalculateCirclePerimeterAndBrailleDots(radius);
+
+            lblperimeter.Text = $"Perimeter: {result.Item1:F2}";
+            lblbrailledots.Text = $"Braille dots: {result.Item2}";
+
+
 
         }
 
         protected void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
+            {
+           
+            Server.Transfer("CircleBrailleWebForm.aspx");
+           
+        } 
 
         protected void txtcenterX_TextChanged(object sender, EventArgs e)
         {

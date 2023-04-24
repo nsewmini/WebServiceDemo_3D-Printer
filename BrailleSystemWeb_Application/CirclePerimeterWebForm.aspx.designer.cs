@@ -51,13 +51,22 @@ namespace BrailleSystemWeb_Application
         protected global::System.Web.UI.WebControls.TextBox txtcenterY;
 
         /// <summary>
-        /// lblresult control.
+        /// lblperimeter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblresult;
+        protected global::System.Web.UI.WebControls.Label lblperimeter;
+
+        /// <summary>
+        /// lblbrailledots control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblbrailledots;
 
         /// <summary>
         /// lblCenter control.
@@ -76,14 +85,5 @@ namespace BrailleSystemWeb_Application
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Buttoncircle;
-
-        /// <summary>
-        /// brailleButton1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button brailleButton1;
     }
 }
