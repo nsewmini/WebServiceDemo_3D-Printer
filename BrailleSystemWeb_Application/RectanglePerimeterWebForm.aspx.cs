@@ -16,20 +16,20 @@ namespace BrailleSystemWeb_Application
 
         protected void Buttoncircle_Click(object sender, EventArgs e)
         {
+            /*   double result = client01.CalculateRectanglePerimeter(Convert.ToInt32(txtwidth.Text), Convert.ToInt32(txtlength.Text));
+            lblresult01.Text = result.ToString();*/
+
+
             BrailleServiceReference.PrinterWebServiceSoapClient client01 = new BrailleServiceReference.PrinterWebServiceSoapClient();
-            double width= double.Parse(txtwidth.Text);
+            double width = double.Parse(txtwidth.Text);
 
             double length = double.Parse(txtlength.Text);
 
 
-            var result = client01.CalculateRectanglePerimeterAndBrailleDots(length,width);
+            var result = client01.CalculateRectanglePerimeterAndBrailleDots(length, width);
 
             lblperimeterrec.Text = $"Perimeter: {result.Item1:F2}";
             lblbraillerec.Text = $"Braille dots: {result.Item2}";
-
-
-
-
         }
 
         protected void txtwidth_TextChanged(object sender, EventArgs e)

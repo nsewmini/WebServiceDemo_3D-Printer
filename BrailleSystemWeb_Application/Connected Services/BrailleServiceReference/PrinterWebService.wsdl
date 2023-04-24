@@ -37,7 +37,7 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="CalculateTrianglePerimeter">
+      <s:element name="CalculateTrianglePerimeterAndBrailleDots">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="side1" type="s:double" />
@@ -46,10 +46,10 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="CalculateTrianglePerimeterResponse">
+      <s:element name="CalculateTrianglePerimeterAndBrailleDotsResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="CalculateTrianglePerimeterResult" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="CalculateTrianglePerimeterAndBrailleDotsResult" type="tns:ValueTupleOfDoubleInt32" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -67,11 +67,11 @@
   <wsdl:message name="CalculateRectanglePerimeterAndBrailleDotsSoapOut">
     <wsdl:part name="parameters" element="tns:CalculateRectanglePerimeterAndBrailleDotsResponse" />
   </wsdl:message>
-  <wsdl:message name="CalculateTrianglePerimeterSoapIn">
-    <wsdl:part name="parameters" element="tns:CalculateTrianglePerimeter" />
+  <wsdl:message name="CalculateTrianglePerimeterAndBrailleDotsSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateTrianglePerimeterAndBrailleDots" />
   </wsdl:message>
-  <wsdl:message name="CalculateTrianglePerimeterSoapOut">
-    <wsdl:part name="parameters" element="tns:CalculateTrianglePerimeterResponse" />
+  <wsdl:message name="CalculateTrianglePerimeterAndBrailleDotsSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateTrianglePerimeterAndBrailleDotsResponse" />
   </wsdl:message>
   <wsdl:portType name="PrinterWebServiceSoap">
     <wsdl:operation name="CalculateCirclePerimeterAndBrailleDots">
@@ -84,10 +84,10 @@
       <wsdl:input message="tns:CalculateRectanglePerimeterAndBrailleDotsSoapIn" />
       <wsdl:output message="tns:CalculateRectanglePerimeterAndBrailleDotsSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="CalculateTrianglePerimeter">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this method calculate the perimeter of the Triangle</wsdl:documentation>
-      <wsdl:input message="tns:CalculateTrianglePerimeterSoapIn" />
-      <wsdl:output message="tns:CalculateTrianglePerimeterSoapOut" />
+    <wsdl:operation name="CalculateTrianglePerimeterAndBrailleDots">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method calculates the number of Braille dots and perimeter of a triangle</wsdl:documentation>
+      <wsdl:input message="tns:CalculateTrianglePerimeterAndBrailleDotsSoapIn" />
+      <wsdl:output message="tns:CalculateTrianglePerimeterAndBrailleDotsSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="PrinterWebServiceSoap" type="tns:PrinterWebServiceSoap">
@@ -110,8 +110,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CalculateTrianglePerimeter">
-      <soap:operation soapAction="http://tempuri.org/CalculateTrianglePerimeter" style="document" />
+    <wsdl:operation name="CalculateTrianglePerimeterAndBrailleDots">
+      <soap:operation soapAction="http://tempuri.org/CalculateTrianglePerimeterAndBrailleDots" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -140,8 +140,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CalculateTrianglePerimeter">
-      <soap12:operation soapAction="http://tempuri.org/CalculateTrianglePerimeter" style="document" />
+    <wsdl:operation name="CalculateTrianglePerimeterAndBrailleDots">
+      <soap12:operation soapAction="http://tempuri.org/CalculateTrianglePerimeterAndBrailleDots" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

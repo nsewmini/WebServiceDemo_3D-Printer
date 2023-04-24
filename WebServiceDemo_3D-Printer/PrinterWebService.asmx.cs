@@ -126,13 +126,25 @@ namespace WebServiceDemo_3D_Printer
         }
         */
 
+        [WebMethod(Description = "This method calculates the number of Braille dots and perimeter of a triangle")]
+        public (double perimeter, int brailleDots) CalculateTrianglePerimeterAndBrailleDots(double side1, double side2, double side3)
+        {
+            double dotPitch = 2.5; // in millimeters
 
+            // Check for invalid sides
+            if (side1 <= 0 || side2 <= 0 || side3 <= 0)
+            {
+                return (-1, -1);
+            }
 
+            // Calculate perimeter
+            double perimeter = side1 + side2 + side3;
 
+            // Calculate Braille dots
+            int brailleDots = (int)Math.Round(perimeter / dotPitch);
 
-
-
-
+            return (perimeter, brailleDots);
+        }
 
         /*
         [WebMethod(Description = "this method calculate the perimeter of the Triangle")]

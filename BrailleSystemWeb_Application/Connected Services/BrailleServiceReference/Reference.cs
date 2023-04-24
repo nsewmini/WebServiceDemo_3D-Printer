@@ -90,11 +90,12 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateRectanglePerimeterAndBrailleDots", ReplyAction="*")]
         System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsResponse> CalculateRectanglePerimeterAndBrailleDotsAsync(BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateTrianglePerimeter", ReplyAction="*")]
-        double CalculateTrianglePerimeter(double side1, double side2, double side3);
+        // CODEGEN: Generating message contract since element name CalculateTrianglePerimeterAndBrailleDotsResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateTrianglePerimeterAndBrailleDots", ReplyAction="*")]
+        BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsResponse CalculateTrianglePerimeterAndBrailleDots(BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateTrianglePerimeter", ReplyAction="*")]
-        System.Threading.Tasks.Task<double> CalculateTrianglePerimeterAsync(double side1, double side2, double side3);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateTrianglePerimeterAndBrailleDots", ReplyAction="*")]
+        System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsResponse> CalculateTrianglePerimeterAndBrailleDotsAsync(BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -237,6 +238,82 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CalculateTrianglePerimeterAndBrailleDotsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CalculateTrianglePerimeterAndBrailleDots", Namespace="http://tempuri.org/", Order=0)]
+        public BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequestBody Body;
+        
+        public CalculateTrianglePerimeterAndBrailleDotsRequest() {
+        }
+        
+        public CalculateTrianglePerimeterAndBrailleDotsRequest(BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CalculateTrianglePerimeterAndBrailleDotsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public double side1;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public double side2;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public double side3;
+        
+        public CalculateTrianglePerimeterAndBrailleDotsRequestBody() {
+        }
+        
+        public CalculateTrianglePerimeterAndBrailleDotsRequestBody(double side1, double side2, double side3) {
+            this.side1 = side1;
+            this.side2 = side2;
+            this.side3 = side3;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CalculateTrianglePerimeterAndBrailleDotsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CalculateTrianglePerimeterAndBrailleDotsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsResponseBody Body;
+        
+        public CalculateTrianglePerimeterAndBrailleDotsResponse() {
+        }
+        
+        public CalculateTrianglePerimeterAndBrailleDotsResponse(BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CalculateTrianglePerimeterAndBrailleDotsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public BrailleSystemWeb_Application.BrailleServiceReference.ValueTupleOfDoubleInt32 CalculateTrianglePerimeterAndBrailleDotsResult;
+        
+        public CalculateTrianglePerimeterAndBrailleDotsResponseBody() {
+        }
+        
+        public CalculateTrianglePerimeterAndBrailleDotsResponseBody(BrailleSystemWeb_Application.BrailleServiceReference.ValueTupleOfDoubleInt32 CalculateTrianglePerimeterAndBrailleDotsResult) {
+            this.CalculateTrianglePerimeterAndBrailleDotsResult = CalculateTrianglePerimeterAndBrailleDotsResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PrinterWebServiceSoapChannel : BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -316,12 +393,33 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
             return ((BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap)(this)).CalculateRectanglePerimeterAndBrailleDotsAsync(inValue);
         }
         
-        public double CalculateTrianglePerimeter(double side1, double side2, double side3) {
-            return base.Channel.CalculateTrianglePerimeter(side1, side2, side3);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsResponse BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap.CalculateTrianglePerimeterAndBrailleDots(BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequest request) {
+            return base.Channel.CalculateTrianglePerimeterAndBrailleDots(request);
         }
         
-        public System.Threading.Tasks.Task<double> CalculateTrianglePerimeterAsync(double side1, double side2, double side3) {
-            return base.Channel.CalculateTrianglePerimeterAsync(side1, side2, side3);
+        public BrailleSystemWeb_Application.BrailleServiceReference.ValueTupleOfDoubleInt32 CalculateTrianglePerimeterAndBrailleDots(double side1, double side2, double side3) {
+            BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequest inValue = new BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequest();
+            inValue.Body = new BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequestBody();
+            inValue.Body.side1 = side1;
+            inValue.Body.side2 = side2;
+            inValue.Body.side3 = side3;
+            BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsResponse retVal = ((BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap)(this)).CalculateTrianglePerimeterAndBrailleDots(inValue);
+            return retVal.Body.CalculateTrianglePerimeterAndBrailleDotsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsResponse> BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap.CalculateTrianglePerimeterAndBrailleDotsAsync(BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequest request) {
+            return base.Channel.CalculateTrianglePerimeterAndBrailleDotsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsResponse> CalculateTrianglePerimeterAndBrailleDotsAsync(double side1, double side2, double side3) {
+            BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequest inValue = new BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequest();
+            inValue.Body = new BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequestBody();
+            inValue.Body.side1 = side1;
+            inValue.Body.side2 = side2;
+            inValue.Body.side3 = side3;
+            return ((BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap)(this)).CalculateTrianglePerimeterAndBrailleDotsAsync(inValue);
         }
     }
 }
