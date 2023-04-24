@@ -138,7 +138,7 @@
                 </tr>
                  <tr>
                      <td class="auto-style15">
-                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Caculate the perimeter</td>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Caculate the braille dots count</td>
                      <td class="auto-style5">
                          <asp:Label ID="lblbrailledots" runat="server" ></asp:Label>
                      </td>
@@ -157,7 +157,7 @@
                     <td colspan="2" class="auto-style17">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <strong>
-                        <asp:Button ID="Buttoncircle" runat="server" Text="calculate the perimeter" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="306px" />
+                        <asp:Button ID="Buttoncircle" runat="server" Text="braille_option" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="306px" />
                         </strong>
                         <br />
                         <br />
