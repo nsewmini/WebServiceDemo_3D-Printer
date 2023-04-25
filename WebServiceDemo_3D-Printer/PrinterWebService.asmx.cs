@@ -132,7 +132,7 @@ namespace WebServiceDemo_3D_Printer
             double dotPitch = 2.5; // in millimeters
 
             // Check for invalid sides
-            if (side1 <= 0 || side2 <= 0 || side3 <= 0)
+            if ((side1 <= 0 || side2 <= 0 || side3 <= 0) || (!(side1 + side2 > side3 && side2 + side3 > side1 && side1 + side3 > side2)))
             {
                 return (-1, -1);
             }
