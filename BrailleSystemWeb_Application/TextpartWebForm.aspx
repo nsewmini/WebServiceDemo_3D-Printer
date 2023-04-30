@@ -14,9 +14,26 @@
             height: 393px;
         }
     </style>
+      <script type="text/javascript">
+        function validateFormText() {
+            // Get the values of the form fields
+            var text = document.getElementById("TextBox").value;
+
+            if (!(text instanceof String) || text.trim().isEmpty()) {
+                alert("Please enter a valid text for the system");
+             
+                return false;
+            }
+
+
+
+            // If everything is valid, return true to submit the form
+            return true;
+        }
+      </script>
 </head>
 <body>
-    <form id="form1" runat="server" class="auto-style5">
+    <form id="form1" runat="server" class="auto-style5" onsubmit = "return validateFormText();">
         <div>
 
             <br />
