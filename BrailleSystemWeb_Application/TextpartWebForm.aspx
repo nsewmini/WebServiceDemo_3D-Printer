@@ -22,9 +22,10 @@
             <br />
             convert text part to braille part<br />
             <br />
+                      <br />  <img alt="" class="auto-style22" src="images/Annotation 2023-04-30 204401.png" /><br />
             enter the text as you like that convert to the braille </div>
         <p>
-        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style4" Height="105px" Width="526px"></asp:TextBox>
+        <asp:TextBox ID="TextBox" runat="server" CssClass="auto-style4" Height="105px" Width="526px"></asp:TextBox>
         </p>
         <p>
             &nbsp;</p>
@@ -35,7 +36,8 @@
         </p>
         <p>
             &nbsp;</p>
-        <p>
+        <p>        <asp:Label ID="textBrailleDotCountLabel" runat="server" ForeColor="Blue" Font-Bold="true"></asp:Label>
+
             &nbsp;</p>
         <p>
             &nbsp;</p>
@@ -46,7 +48,8 @@
         <p>
             &nbsp;</p>
         <p>
-            &nbsp;</p>
+            &nbsp;</p>       
+
     </form>
 </body>
 </html>

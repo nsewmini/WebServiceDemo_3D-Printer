@@ -96,6 +96,13 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateTrianglePerimeterAndBrailleDots", ReplyAction="*")]
         System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsResponse> CalculateTrianglePerimeterAndBrailleDotsAsync(BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequest request);
+        
+        // CODEGEN: Generating message contract since element name text from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CountTextfieldBrailleDots", ReplyAction="*")]
+        BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponse CountTextfieldBrailleDots(BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CountTextfieldBrailleDots", ReplyAction="*")]
+        System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponse> CountTextfieldBrailleDotsAsync(BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -314,6 +321,74 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CountTextfieldBrailleDotsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CountTextfieldBrailleDots", Namespace="http://tempuri.org/", Order=0)]
+        public BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequestBody Body;
+        
+        public CountTextfieldBrailleDotsRequest() {
+        }
+        
+        public CountTextfieldBrailleDotsRequest(BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CountTextfieldBrailleDotsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string text;
+        
+        public CountTextfieldBrailleDotsRequestBody() {
+        }
+        
+        public CountTextfieldBrailleDotsRequestBody(string text) {
+            this.text = text;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CountTextfieldBrailleDotsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CountTextfieldBrailleDotsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponseBody Body;
+        
+        public CountTextfieldBrailleDotsResponse() {
+        }
+        
+        public CountTextfieldBrailleDotsResponse(BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CountTextfieldBrailleDotsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int CountTextfieldBrailleDotsResult;
+        
+        public CountTextfieldBrailleDotsResponseBody() {
+        }
+        
+        public CountTextfieldBrailleDotsResponseBody(int CountTextfieldBrailleDotsResult) {
+            this.CountTextfieldBrailleDotsResult = CountTextfieldBrailleDotsResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PrinterWebServiceSoapChannel : BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -420,6 +495,31 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
             inValue.Body.side2 = side2;
             inValue.Body.side3 = side3;
             return ((BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap)(this)).CalculateTrianglePerimeterAndBrailleDotsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponse BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap.CountTextfieldBrailleDots(BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest request) {
+            return base.Channel.CountTextfieldBrailleDots(request);
+        }
+        
+        public int CountTextfieldBrailleDots(string text) {
+            BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest inValue = new BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest();
+            inValue.Body = new BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequestBody();
+            inValue.Body.text = text;
+            BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponse retVal = ((BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap)(this)).CountTextfieldBrailleDots(inValue);
+            return retVal.Body.CountTextfieldBrailleDotsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponse> BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap.CountTextfieldBrailleDotsAsync(BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest request) {
+            return base.Channel.CountTextfieldBrailleDotsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponse> CountTextfieldBrailleDotsAsync(string text) {
+            BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest inValue = new BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest();
+            inValue.Body = new BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequestBody();
+            inValue.Body.text = text;
+            return ((BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap)(this)).CountTextfieldBrailleDotsAsync(inValue);
         }
     }
 }
