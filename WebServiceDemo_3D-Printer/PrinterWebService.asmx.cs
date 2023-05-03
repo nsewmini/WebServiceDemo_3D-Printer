@@ -162,30 +162,6 @@ namespace WebServiceDemo_3D_Printer
             return perimeter;
         }
         */
-        [WebMethod]
-        public int CountTextfieldBrailleDots(string text)
-        {
-            Dictionary<char, string> brailleDict = new Dictionary<char, string>()
-            {
-                {'a', "⠁"}, {'b', "⠃"}, {'c', "⠉"}, {'d', "⠙"}, {'e', "⠑"}, {'f', "⠋"}, {'g', "⠛"}, {'h', "⠓"},
-                {'i', "⠊"}, {'j', "⠚"}, {'k', "⠅"}, {'l', "⠇"}, {'m', "⠍"}, {'n', "⠝"}, {'o', "⠕"}, {'p', "⠏"},
-                {'q', "⠟"}, {'r', "⠗"}, {'s', "⠎"}, {'t', "⠞"}, {'u', "⠥"}, {'v', "⠧"}, {'w', "⠺"}, {'x', "⠭"},
-                {'y', "⠽"}, {'z', "⠵"}, {' ', "⠀"}
-            };
-
-            int dotCount = 0;
-            foreach (char c in text.ToLower())
-            {
-                if (brailleDict.ContainsKey(c))
-                {
-                    string brailleChar = brailleDict[c];
-                    dotCount += brailleChar.Count(dot => dot == '⠠' || dot == '⠼' || dot == '⠿' || dot == '⠶' || dot == '⠲' || dot == '⠐' || dot == '⠂' || dot == '⠆' || dot == '⠒' || dot == '⠲' || dot == '⠦' || dot == '⠔' || dot == '⠢' || dot == '⠖' || dot == '⠶');
-                }
-            }
-
-            return dotCount;
-        }
-
-
+       
     }
 }

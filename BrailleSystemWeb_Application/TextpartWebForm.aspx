@@ -14,7 +14,7 @@
             height: 393px;
         }
     </style>
-      <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function validateFormText() {
             // Get the values of the form fields
             var text = document.getElementById("TextBox").value;
@@ -30,7 +30,7 @@
             // If everything is valid, return true to submit the form
             return true;
         }
-      </script>
+      </script>-->
 </head>
 <body>
     <form id="form1" runat="server" class="auto-style5" onsubmit = "return validateFormText();">
