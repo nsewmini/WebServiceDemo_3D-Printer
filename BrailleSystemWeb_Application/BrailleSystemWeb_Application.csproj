@@ -73,6 +73,15 @@
     <Content Include="Connected Services\BrailleServiceReference\BrailleSystemWeb_Application.BrailleServiceReference.ValueTupleOfDoubleInt32.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\BrailleServiceReference\BrailleSystemWeb_Application.BrailleServiceReference.CalculateCirclePerimeterAndBrailleDotsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\BrailleServiceReference\BrailleSystemWeb_Application.BrailleServiceReference.CalculateRectanglePerimeterAndBrailleDotsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\BrailleServiceReference\BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\BrailleServiceReference\BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>

@@ -97,7 +97,7 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalculateTrianglePerimeterAndBrailleDots", ReplyAction="*")]
         System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsResponse> CalculateTrianglePerimeterAndBrailleDotsAsync(BrailleSystemWeb_Application.BrailleServiceReference.CalculateTrianglePerimeterAndBrailleDotsRequest request);
         
-        // CODEGEN: Generating message contract since element name text from namespace http://tempuri.org/ is not marked nillable
+        // CODEGEN: Generating message contract since element name input from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CountTextfieldBrailleDots", ReplyAction="*")]
         BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponse CountTextfieldBrailleDots(BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest request);
         
@@ -345,13 +345,13 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
     public partial class CountTextfieldBrailleDotsRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string text;
+        public string input;
         
         public CountTextfieldBrailleDotsRequestBody() {
         }
         
-        public CountTextfieldBrailleDotsRequestBody(string text) {
-            this.text = text;
+        public CountTextfieldBrailleDotsRequestBody(string input) {
+            this.input = input;
         }
     }
     
@@ -502,10 +502,10 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
             return base.Channel.CountTextfieldBrailleDots(request);
         }
         
-        public int CountTextfieldBrailleDots(string text) {
+        public int CountTextfieldBrailleDots(string input) {
             BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest inValue = new BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest();
             inValue.Body = new BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequestBody();
-            inValue.Body.text = text;
+            inValue.Body.input = input;
             BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponse retVal = ((BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap)(this)).CountTextfieldBrailleDots(inValue);
             return retVal.Body.CountTextfieldBrailleDotsResult;
         }
@@ -515,10 +515,10 @@ namespace BrailleSystemWeb_Application.BrailleServiceReference {
             return base.Channel.CountTextfieldBrailleDotsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponse> CountTextfieldBrailleDotsAsync(string text) {
+        public System.Threading.Tasks.Task<BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsResponse> CountTextfieldBrailleDotsAsync(string input) {
             BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest inValue = new BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequest();
             inValue.Body = new BrailleSystemWeb_Application.BrailleServiceReference.CountTextfieldBrailleDotsRequestBody();
-            inValue.Body.text = text;
+            inValue.Body.input = input;
             return ((BrailleSystemWeb_Application.BrailleServiceReference.PrinterWebServiceSoap)(this)).CountTextfieldBrailleDotsAsync(inValue);
         }
     }

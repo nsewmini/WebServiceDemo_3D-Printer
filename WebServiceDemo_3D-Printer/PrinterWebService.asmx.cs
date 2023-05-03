@@ -162,6 +162,27 @@ namespace WebServiceDemo_3D_Printer
             return perimeter;
         }
         */
-       
+        [WebMethod]
+        public int CountTextfieldBrailleDots(string input)
+        {
+
+            int value = 0;
+            int[] values = new int[52] {
+        1, 2, 2, 3, 2, 3, 4, 3, 2, 3, 2, 3, 3, 4, 3, 4, 5, 4, 3, 4, 3, 4, 4, 5, 5, 4, // lowercase letters
+        1, 2, 2, 3, 2, 3, 4, 3, 2, 3, 2, 3, 3, 4, 3, 4, 5, 4, 3, 4, 3, 4, 4, 4, 5, 4  // uppercase letters
+               };
+
+            input = input.ToLower();
+
+            foreach (char c in input)
+            {
+                if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') // make sure the character is a letter
+                {
+                    value += values[char.ToLower(c) - 'a'];
+                }
+            }
+            return value;
+        }
+
     }
 }

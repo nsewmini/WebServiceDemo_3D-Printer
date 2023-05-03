@@ -16,8 +16,15 @@ namespace BrailleSystemWeb_Application
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-             
-           
+            BrailleServiceReference.PrinterWebServiceSoapClient client06 = new BrailleServiceReference.PrinterWebServiceSoapClient();
+            string input = (TextBox.Text);
+
+
+            int value = client06.CountTextfieldBrailleDots(input);
+
+            textBrailleDotCountLabel.Text = "braille-counts(" + value + ")";
+            // textBrailleDotCountLabel.Text = $"braille-counts: {result}"; 
+
 
 
         }
