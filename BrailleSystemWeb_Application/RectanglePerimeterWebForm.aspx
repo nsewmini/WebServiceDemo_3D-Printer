@@ -49,7 +49,7 @@
             background-color: #66FF33;
         }
         .auto-style18 {
-            background-color: #66FF33;
+            background-color: #FF99CC;
         }
         .auto-style19 {
             background-color: #CCFF99;
