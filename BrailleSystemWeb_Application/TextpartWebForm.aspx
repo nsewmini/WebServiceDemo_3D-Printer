@@ -8,13 +8,14 @@
     <style type="text/css">
 
         .auto-style4 {
-            background-color: #00CCFF;
+            background-color: #99FF99;
         }
         .auto-style5 {
             height: 368px;
         }
         .auto-style6 {
-            margin-left: 209px;
+            margin-left: 0px;
+            margin-bottom: 0px;
             background-color: #FF99CC;
         }
         .auto-style7 {
@@ -86,7 +87,7 @@
             &nbsp;</p>
         <p>
             &nbsp;</p>
-            <asp:Button ID="TextpartbrailleButton2" runat="server" Height="62px" OnClick="Button2_Click" Text="convert to braille dots " Width="892px" CssClass="auto-style6" />
+            <asp:Button ID="TextpartbrailleButton2" runat="server" Height="62px" OnClick="Button2_Click" Text="convert to braille dots " Width="873px" CssClass="auto-style6" />
         <p>
             &nbsp;</p>
         <p>
