@@ -18,14 +18,21 @@ namespace WebServiceDemo_3D_Printer
 
     public class PrinterWebService : System.Web.Services.WebService
     {
-     
+         //lets do the computation part for circle shape
 
         [WebMethod(Description = "This method calculates the number of Braille dots and perimeter of a circle")]
         public (double perimeter, int brailleDots) CalculateCirclePerimeterAndBrailleDots(double radius)
         {
+           
             
+            //. The standard distance between dots is 2.5 mm
+            //so we get the  2.5 mm
+            double dotPitch = 2.5; // in millimeters
 
-        double dotPitch = 2.5; // in millimeters
+
+            //here we get that  pi is a mathematical constant approximately equal to 3.14159
+            //here center coordinates is not effect for the circle perimeter calculation
+
 
             // Check for invalid radius
             if (radius <= 0)
@@ -36,54 +43,18 @@ namespace WebServiceDemo_3D_Printer
             // Calculate perimeter
             double perimeter = 2 * Math.PI * radius;
 
+            //Divide the circumference by the distance between the dots in Braille.
+            //divide by the dot pitch:
             // Calculate Braille dots
+            // Convert the perimeter to Braille dots
             int brailleDots = (int)Math.Round(perimeter / dotPitch);
 
             return (perimeter, brailleDots);
         }
 
-        /*public double CalculateCirclePerimeter(double radius)
-                 {//here we get the assumption that  pi is a mathematical constant approximately equal to 3.14159
-                  //here center coordinates is not effect for the circle perimeter calculation
 
 
-                     if ((radius <= 0))
-                     {
-                         return -1;
-                     }
-
-                     double perimeter = 2 * Math.PI * radius;
-                     return perimeter;
-                 }
-
-
-                 //lets do the computation for circle shape
-                 //Divide the circumference by the distance between the dots in Braille.
-                 //. The standard distance between dots is 2.5 mm
-                 //so we get the  2.5 mm
-                 //divide by the dot pitch:
-                 // Convert the perimeter to Braille dots
-                 [WebMethod(Description = "This method calculates the number of Braille dots needed to represent a circle")]
-                 public int CalculateBrailleDots(double radius)
-                 {
-                     double dotPitch = 2.5; // in millimeters
-
-                     // Check for invalid radius
-                     if (radius <= 0)
-                     {
-                         return -1;
-                     }
-
-                     // Calculate perimeter
-                     double perimeter = 2 * Math.PI * radius;
-
-                     // Calculate Braille dots
-                     int brailleDots = (int)Math.Round(perimeter / dotPitch);
-
-                     return brailleDots;
-                 }
-
-         */
+        //lets do the computation for the rectangle shape
 
         /// <summary>
         /// ///
@@ -103,7 +74,7 @@ namespace WebServiceDemo_3D_Printer
                 return (-1, -1);
             }
 
-            // Calculate perimeter
+            // Calculate perimeter of the rectangle
             double perimeter = 2 * (length + width);
 
             // Calculate Braille dots
@@ -112,19 +83,10 @@ namespace WebServiceDemo_3D_Printer
             return (perimeter, brailleDots);
         }
 
-        /*
-        [WebMethod(Description = "this method calculate the perimeter of the Rectangle")]
-        public double CalculateRectanglePerimeter(double length, double width)
-        {
-            if (length <= 0 || width <= 0)
-            {
-                return -1;
-            }
 
-            double perimeter = 2 * (length + width);
-            return perimeter;
-        }
-        */
+
+
+       //lets do the  computation part for the triangle shape
 
         [WebMethod(Description = "This method calculates the number of Braille dots and perimeter of a triangle")]
         public (double perimeter, int brailleDots) CalculateTrianglePerimeterAndBrailleDots(double side1, double side2, double side3)
@@ -137,7 +99,7 @@ namespace WebServiceDemo_3D_Printer
                 return (-1, -1);
             }
 
-            // Calculate perimeter
+            // Calculate perimeter for the triangle
             double perimeter = side1 + side2 + side3;
 
             // Calculate Braille dots
@@ -146,26 +108,15 @@ namespace WebServiceDemo_3D_Printer
             return (perimeter, brailleDots);
         }
 
-        /*
-        [WebMethod(Description = "this method calculate the perimeter of the Triangle")]
-        public double CalculateTrianglePerimeter(double side1, double side2, double side3)
-        {
-            if ((side1 <= 0 || side2 <= 0 || side3 <= 0) || (!(side1 + side2 > side3 && side2 + side3 > side1 && side1 + side3 > side2)))
-                {
+     
 
-                return -1;
+        //lets do the computation part for the user input text part also
+        //here our tool is only enables for the string type text inputs
 
-               
-            }
-
-            double perimeter = side1 + side2 + side3;
-            return perimeter;
-        }
-        */
         [WebMethod]
         public int CountTextfieldBrailleDots(string input)
         {
-
+            //here we get both alphabetical upper and lowercase characters as braille supported characters
             int value = 0;
             int[] values = new int[52] {
         1, 2, 2, 3, 2, 3, 4, 3, 2, 3, 2, 3, 3, 4, 3, 4, 5, 4, 3, 4, 3, 4, 4, 5, 5, 4, // lowercase letters
