@@ -19,7 +19,8 @@
             font-size: large;
             background-color: #000000;
             font-weight: bold;
-            margin-left: 214px;
+            margin-left: 190px;
+            margin-top: 0px;
         }
         .auto-style10 {
             height: 360px;
@@ -86,10 +87,11 @@
             background-color: #CCFF99;
         }
         .auto-style31 {
-            height: 333px;
-            width: 493px;
-            margin-top: 31px;
+            height: 128px;
+            width: 235px;
+            margin-top: 0px;
             float: left;
+            margin-left: 481px;
         }
         .auto-style32 {
             height: 66px;
@@ -113,14 +115,11 @@
             height: 73px;
             width: 574px;
         }
-        .auto-style37 {
-            width: 412px;
-            float: right;
-            height: 324px;
-            margin-top: 34px;
-        }
         .auto-style38 {
             background-color: #FF99FF;
+        }
+        #form1 {
+            margin-top: 0px;
         }
     </style>
      <script type="text/javascript">
@@ -152,17 +151,17 @@
 <body style="height: 554px; width: 1090px;">
 
     <p class="auto-style29">
-        &nbsp;&nbsp;&nbsp;&nbsp; <strong><span class="auto-style19"><em><span class="auto-style38">&nbsp;Circle braille dots computation</span></em></span></strong></p>
+        &nbsp;&nbsp;&nbsp;&nbsp; <strong><span class="auto-style19"><em><span class="auto-style38" style="background-color: #CCFFCC; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 36px; font-weight: bold; color: #006600; text-decoration: none;">&nbsp;Circle braille dots computation</span></em></span></strong></p>
     <p class="auto-style18">
-                        <img alt="" class="auto-style31" src="images/Annotation 2023-04-24 234126.png" />
-        <img alt="" class="auto-style37" src="images/Annotation 2023-04-24 235015.png" /></p>
+                        <img alt="" class="auto-style31" src="images/Annotation 2023-04-24 234126.png" style="background-color: #CCFFCC" />
+        </p>
     <p class="auto-style18">
         &nbsp;</p>
-    <form id="form1" runat="server" onsubmit = "return validateForm();">
+    <form id="form1" runat="server" onsubmit = "return validateForm();" style="background-color: #CCFFCC; width: 1368px; height: 857px;">
         <div style="color: #000000; text-align: justify;" class="auto-style10">
             <table style="font-family:Arial; " class="auto-style11">
                  <tr>
-                     <td class="auto-style14">
+                     <td class="auto-style14" style="font-weight: bold; color: #006600">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style25">Radius</span>
 
                      </td>
@@ -172,7 +171,7 @@
                 </tr>
 
                 <tr>
-                     <td class="auto-style33">
+                     <td class="auto-style33" style="font-weight: bold; color: #006600">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Center-X
 
                      </td>
@@ -182,7 +181,7 @@
                 </tr>
 
                 <tr>
-                     <td class="auto-style35">
+                     <td class="auto-style35" style="font-weight: bold; color: #006600">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Center-Y
 
                      </td>
@@ -191,37 +190,37 @@
                      </td>
                 </tr>
                 <tr>
-                     <td class="auto-style24">
+                     <td class="auto-style24" style="font-weight: bold; color: #006600">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Caculate the perimeter</td>
                      <td class="auto-style23">
-                         <asp:Label ID="lblperimeter" runat="server" CssClass="auto-style30" ></asp:Label>
+                         <asp:Label ID="lblperimeter" runat="server" CssClass="auto-style30" Font-Bold="True" Font-Size="X-Large" ></asp:Label>
                      </td>
                 </tr>
                  <tr>
-                     <td class="auto-style27">
+                     <td class="auto-style27" style="font-weight: bold; color: #006600">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Caculate the braille dots count</td>
                      <td class="auto-style5">
-                         <asp:Label ID="lblbrailledots" runat="server" CssClass="auto-style30" ></asp:Label>
+                         <asp:Label ID="lblbrailledots" runat="server" CssClass="auto-style30" Font-Bold="True" Font-Size="X-Large" ></asp:Label>
                      </td>
                 </tr>
                 <tr>
-  <td class="auto-style20">
+  <td class="auto-style20" style="font-weight: bold; color: #006600">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Center
   </td>
-  <td class="auto-style21">
-    <asp:Label ID="lblCenter" runat="server" CssClass="auto-style13" Height="29px" Width="279px"></asp:Label>
+  <td class="auto-style21" style="color: #003399">
+    <asp:Label ID="lblCenter" runat="server" CssClass="auto-style13" Height="29px" Width="279px" BorderColor="Black" Font-Bold="True" Font-Size="X-Large" ForeColor="Black"></asp:Label>
       <strong><br />
-        [</strong><span class="auto-style28">Due to the 3D printer we get the centerpoints(x,y) for to know the what is the position]</span></td>
+        [</strong><span class="auto-style28" style="color: #000099">Due to the 3D printer we get the centerpoints(x,y) for to know the what is the position]</span></td>
 </tr>
 
                 <tr>
                     <td colspan="2" class="auto-style17">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <strong>
+                        <asp:Button ID="Buttoncircle" runat="server" Text="braille_option" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="73px" Width="400px" BackColor="#009933" BorderColor="Black" Font-Bold="True" ForeColor="Black" />
                         <br />
                         <br />
-                        <asp:Button ID="Buttoncircle" runat="server" Text="braille_option" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="685px" />
                         </strong>
                         <br />
                         <br />
