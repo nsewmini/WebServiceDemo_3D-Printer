@@ -49,7 +49,7 @@
         .auto-style16 {
             text-align: center;
             width: 1335px;
-            height: 341px;
+            height: 221px;
         }
         .auto-style17 {
             background-color: #00FF00;
@@ -71,8 +71,8 @@
             background-color: #CCFF99;
         }
         .auto-style22 {
-            width: 463px;
-            height: 255px;
+            width: 294px;
+            height: 151px;
         }
         .auto-style23 {
             background-color: #FF99CC;
@@ -105,10 +105,10 @@
 
 </head>
 <body>
-    <form id="form1" runat="server" onsubmit = "return validateForm02();">
+    <form id="form1" runat="server" onsubmit = "return validateForm02();" style="background-color: #CCFFCC; font-weight: bold; color: #006600; height: 771px;">
         <div class="auto-style16">
             <br />
-            <span class="auto-style18"><strong><em><span class="auto-style23">&nbsp;Triangle braille dots computation</span></em></strong></span><br class="auto-style17" />
+            <span class="auto-style18"><strong><em><span class="auto-style23" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 36px; color: #006600; background-color: #99FF66; text-decoration: none;">&nbsp;Triangle braille dots computation</span></em></strong></span><br class="auto-style17" />
             <br />
             <img alt="" class="auto-style22" src="images/Annotation 2023-04-25 000759.png" /><br />
             <br />
@@ -118,7 +118,7 @@
             <br />
             <br />
         </div>
-            <table style="font-family:Arial; " class="auto-style11">
+            <table style="font-family:Arial; margin-top: 0px;" class="auto-style11">
                  <tr>
                      <td class="auto-style14">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; side01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
@@ -152,15 +152,15 @@
                      <td class="auto-style19">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caculate the perimeter</td>
                      <td class="auto-style20">
-                         <asp:Label ID="lblperimetertriangle" runat="server" CssClass="auto-style21" ></asp:Label>
+                         <asp:Label ID="lblperimetertriangle" runat="server" CssClass="auto-style21" Font-Bold="True" Font-Size="X-Large" ></asp:Label>
                          <br />
                      </td>
                 </tr>
                  <tr>
                      <td class="auto-style4">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caculate braille dots count</td>
-                     <td class="auto-style5">
-                         <asp:Label ID="lblbrailletriangle" runat="server" CssClass="auto-style21" ></asp:Label>
+                     <td class="auto-style5" style="background-color: #CCFFCC">
+                         <asp:Label ID="lblbrailletriangle" runat="server" CssClass="auto-style21" Font-Bold="True" Font-Size="X-Large" ></asp:Label>
                      </td>
                 </tr>
             </table>
@@ -170,7 +170,7 @@
             &nbsp;</p>
         <p>
             <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Buttontriangle" runat="server" Text="braille_option" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="563px" />
+                        <asp:Button ID="Buttontriangle" runat="server" Text="braille_option" OnClick="Buttoncircle_Click" CssClass="auto-style9" Height="53px" Width="563px" BackColor="#009900" BorderColor="Black" ForeColor="Black" />
                         </strong>
         </p>
     </form>
