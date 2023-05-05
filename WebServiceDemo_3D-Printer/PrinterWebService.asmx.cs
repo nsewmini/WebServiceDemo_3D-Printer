@@ -7,6 +7,8 @@ using System.Web.Services;
 
 namespace WebServiceDemo_3D_Printer
 {
+
+
     /// <summary>
     /// Summary description for PrinterWebService
     /// </summary>
@@ -16,9 +18,14 @@ namespace WebServiceDemo_3D_Printer
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
 
+
+
     public class PrinterWebService : System.Web.Services.WebService
     {
+
+
          //lets do the computation part for circle shape
+
 
         [WebMethod(Description = "This method calculates the number of Braille dots and perimeter of a circle")]
         public (double perimeter, int brailleDots) CalculateCirclePerimeterAndBrailleDots(double radius)
@@ -54,6 +61,8 @@ namespace WebServiceDemo_3D_Printer
 
 
 
+
+
         //lets do the computation for the rectangle shape
 
         /// <summary>
@@ -86,6 +95,15 @@ namespace WebServiceDemo_3D_Printer
 
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="side1"></param>
+        /// <param name="side2"></param>
+        /// <param name="side3"></param>
+        /// <returns></returns>
+
+
        //lets do the  computation part for the triangle shape
 
         [WebMethod(Description = "This method calculates the number of Braille dots and perimeter of a triangle")]
@@ -109,6 +127,8 @@ namespace WebServiceDemo_3D_Printer
         }
 
      
+
+
 
         //lets do the computation part for the user input text part also
         //here our tool is only enables for the string type text inputs
